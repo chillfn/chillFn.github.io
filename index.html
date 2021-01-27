@@ -1,0 +1,93 @@
+<center> <h2 style="color=red"> Time till Nasa's rover lands on Moon </h2> </center>
+<title> Nasa's rover landing on moon</title>
+<link rel="stylesheet" href="xd.css">
+<center> <div id="headerCountdown">
+<center>      <div class="unit">
+        <span class="days">33</span>
+        <small>Days</small>
+      </div> </center>
+     <center> <div class="unit">
+        <span class="hours">04</span>
+        <small>Hours</small>
+      </div> </center>
+      <center><div class="unit">
+        <span class="minutes">20</span>
+        <small>Minutes</small>
+      </div> </center>
+	  <center><div class="unit">
+        <span class="seconds">58</span>
+        <small>Seconds</small>
+      </div></center>
+    </div> </center>
+	<script type="text/javascript">
+      function newCountdown(element, deadline) {
+        // Container element
+        var clock = document.getElementById(element);
+
+        // Set the date we're counting down to
+        var countDownDate = new Date(deadline).getTime();
+
+        // Update every interval
+        var continueCount = function() {
+          setInterval(updateCounter, 1000);
+        };
+
+        // Update the count down every 1 second
+        var updateCounter = function() {
+          // Get todays date and time
+          var nowDate = new Date().getTime();
+
+          // Find the distance between nowDate and the count down date
+          var distance = countDownDate - nowDate;
+
+          // Repeat if we haven't reached 0 or below, otherwise set everything to 0
+          if (distance > 0) {
+            continueCount();
+            updateClock(distance);
+          } else {
+            displayTimeoutMessage(clock);
+            clearInterval(updateCounter);
+          }
+        }
+
+        function updateClock(distance) {
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // HTML elements
+          var daysSpan = clock.querySelector('.days'),
+              hoursSpan = clock.querySelector('.hours'),
+              minutesSpan = clock.querySelector('.minutes'),
+              secondsSpan = clock.querySelector('.seconds');
+
+          // Fill our HTML elements
+          daysSpan.innerHTML = days;
+          hoursSpan.innerHTML = ('0' + hours).slice(-2);
+          minutesSpan.innerHTML = ('0' + minutes).slice(-2);
+          secondsSpan.innerHTML = ('0' + seconds).slice(-2);
+        }
+
+        function displayTimeoutMessage(clock) {
+          clock.innerHTML = 'Lunar capsule closed';
+        }
+
+        updateCounter();
+      }
+ 
+      newCountdown('headerCountdown', 'March 1, 2021, 03:00:00 PST');
+      // newCountdown('headerCountdown', 'January 1, 1970, 00:00:00 GMT');
+    </script>
+<center> <p> Popular YouTuber Jimmy "MrBeast" Donaldson has an ingenious plan, which allows fans to send pictures of anything they want to the moon.
+
+The 22-year old philanthropist and entrepreneur took to Twitter to reveal the "massive announcement." He had been teasing something big the previous day. </p> <center> <br>
+<center> <p> Elaborating further on his "out of this world" concept, MrBeast revealed that NASA is putting a rover on the moon. He's somehow managed to convince them to let him buy storage space on the moon.
+
+Stating that it would be fun to let people put whatever they want on the moon, MrBeast delves into the procedure involved in doing so with an informative video. </p> </center>
+ <div id="video">
+   <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/5bmTaSHj_uw" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
+  <div id="cut"> </div><p> MrBeast is literally letting you put anything on the moon NO JOKE
+    <br> A true legend </p> </div> 
+  </div>
