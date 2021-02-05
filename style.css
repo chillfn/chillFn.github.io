@@ -1,102 +1,207 @@
 
 element.style {
 }
-html {
-    background-color: rgb(0, 0, 0);
-}
-@media screen and (max-width: 1360px)
-#headerCountdown {
-    font-size: 5vw;
-    font-family:cursive;
-}
-#headerCountdown {
-    display: inline-block;
-    margin: 0 auto 35px;
-    font-family:cursive;
-    text-align: center;
-    font-size: 4em;
-}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, .shopify-section .swatch .swatch-item .tooltip, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    padding: 0;
-    margin: 0;
-    border: ;
-    font-size: 30px;
-    font-family: 'digitalClock', sans-serif;
-    vertical-align: baseline;
-    color:cyan;
-    text-shadow: lime;
-    box-shadow: lime;
-    outline: none;
-    text-shadow: darkslateblue;
-    text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-*, *:after, *:before {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-user agent stylesheet
-div {
-    display: block;
-}
-.section-lunar-capsule-page__header {
-    position: relative;
-    background-image: url(//cdn.shopify.com/s/files/1/0016/1975/5059/files/moon-earth-rise-2_2500x2500.png?v=1611272940);
-    background-size: cover;
-    background-position: right top;
-    color: #ffffff;
-}
-.center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+* {
+  box-sizing: border-box;
 }
 body {
-    color: #1a1a1a;
-    background-color: #00000;
-    font: normal 16px/21px "Work Sans",sans-serif;
+  margin: 0;
 }
-body {
-    height: 100%;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
+.clearfix{
+  clear:both;
 }
-*, *:after, *:before {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.header-banner{
+  padding-top:35px;
+  padding-bottom:100px;
+  color:#ffffff;
+  font-family:Helvetica, serif;
+  font-weight:100;
+  background-image:url("//grapesjs.com/img/bg-gr-v.png"), url("//grapesjs.com/img/work-desk.jpg");
+  background-attachment:scroll, scroll;
+  background-position:left top, center center;
+  background-repeat:repeat-y, no-repeat;
+  background-size:contain, cover;
 }
-*, *:after, *:before {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.container-width{
+  width:90%;
+  max-width:1150px;
+  margin:0 auto;
 }
-.video {
-    font-family:'Times New Roman', Times, serif;
-    color:cyan;
+.logo-container{
+  float:left;
+  width:50%;
 }
-iframe {
-    border: darkorchid;
-    border-width: 10px;
-    border-bottom: darkorchid;
+.logo{
+  background-color:#fff;
+  border-radius:5px;
+  width:130px;
+  padding:10px;
+  min-height:30px;
+  text-align:center;
+  line-height:30px;
+  color:#4d114f;
+  font-size:23px;
 }
-
-.cut {
-    color:indigo;
-    text-shadow: lime;
+.lead-title{
+  margin:150px 0 30px 0;
+  font-size:40px;
+}
+.sub-lead-title{
+  max-width:650px;
+  line-height:30px;
+  margin-bottom:30px;
+  color:#c6c6c6;
+}
+.lead-btn{
+  margin-top:15px;
+  padding:10px;
+  width:190px;
+  min-height:30px;
+  font-size:20px;
+  text-align:center;
+  letter-spacing:3px;
+  line-height:30px;
+  background-color:#d983a6;
+  border-radius:5px;
+  transition:all 0.5s ease;
+  cursor:pointer;
+}
+.lead-btn:hover{
+  background-color:#ffffff;
+  color:#4c114e;
+}
+.lead-btn:active{
+  background-color:#4d114f;
+  color:#fff;
+}
+.flex-sect{
+  background-color:#fafafa;
+  padding:100px 0;
+  font-family:Helvetica, serif;
+}
+.flex-title{
+  margin-bottom:15px;
+  font-size:2em;
+  text-align:center;
+  font-weight:700;
+  color:#555;
+  padding:5px;
+}
+.flex-desc{
+  margin-bottom:55px;
+  font-size:1em;
+  color:rgba(0, 0, 0, 0.5);
+  text-align:center;
+  padding:5px;
+}
+.cards{
+  padding:20px 0;
+  display:flex;
+  justify-content:space-around;
+  flex-flow:wrap;
+}
+.card{
+  background-color:white;
+  height:300px;
+  width:300px;
+  margin-bottom:30px;
+  box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius:2px;
+  transition:all 0.5s ease;
+  font-weight:100;
+  overflow:hidden;
+}
+.card:hover{
+  margin-top:-5px;
+  box-shadow:0 20px 30px 0 rgba(0, 0, 0, 0.2);
+}
+.card-body{
+  padding:15px 15px 5px 15px;
+  color:#555;
+}
+.card-title{
+  font-size:1.4em;
+  margin-bottom:5px;
+}
+.card-sub-title{
+  color:#b3b3b3;
+  font-size:1em;
+  margin-bottom:15px;
+}
+.card-desc{
+  font-size:0.85rem;
+  line-height:17px;
+}
+.bdg-sect{
+  padding-top:100px;
+  padding-bottom:100px;
+  font-family:Helvetica, serif;
+  background-color:#fafafa;
+}
+.bdg-title{
+  text-align:center;
+  font-size:2em;
+  margin-bottom:55px;
+  color:#555555;
+}
+.badges{
+  padding:20px;
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+.badge{
+  width:290px;
+  font-family:Helvetica, serif;
+  background-color:white;
+  margin-bottom:30px;
+  box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius:3px;
+  font-weight:100;
+  overflow:hidden;
+  text-align:center;
+}
+.badge-header{
+  height:115px;
+  background-image:url("//grapesjs.com/img/bg-gr-v.png"), url("//grapesjs.com/img/work-desk.jpg");
+  background-position:left top, center center;
+  background-attachment:scroll, fixed;
+  overflow:hidden;
+}
+.badge-name{
+  font-size:1.4em;
+  margin-bottom:5px;
+}
+.badge-role{
+  color:#777;
+  font-size:1em;
+  margin-bottom:25px;
+}
+.badge-desc{
+  font-size:0.85rem;
+  line-height:20px;
+}
+.badge-body{
+  margin:35px 10px;
+}
+.badge-foot{
+  color:#fff;
+  background-color:#a290a5;
+  padding-top:13px;
+  padding-bottom:13px;
+  display:flex;
+  justify-content:center;
+}
+*{
+  box-sizing:border-box;
+}
+body{
+  margin:0;
+}
+#i22h{
+  font-family:Arial, Helvetica, sans-serif;
+}
+#iyo1s{
+  padding:10px;
 }
