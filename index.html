@@ -1,206 +1,95 @@
-<center> <h2> Time till something BIG!!</h2> </center>
-<title> ChillFN | Home | Official</title>
-<style>
-       element.style {
-}
-html {
-    background-color: rgb(0, 0, 0);
-}
-
-
-}
-#headerCountdown {
-    display: inline-block;
-    margin: 0 auto 35px;
-    font-family:cursive;
-    text-align: center;
-    font-size: 4em;
-}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, .shopify-section .swatch .swatch-item .tooltip, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    padding: 0;
-    margin: 0;
-    border: ;
-    font-size: 30px;
-    font-family: 'digitalClock', sans-serif;
-    vertical-align: baseline;
-    color:cyan;
-    
-    box-shadow: lime;
-    outline: none;
-    text-shadow: darkslateblue;
-    text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-*, *:after, *:before {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-user agent stylesheet
-div {
-    display: block;
-}
-.section-lunar-capsule-page__header {
-    position: relative;
-    background-image: url(//cdn.shopify.com/s/files/1/0016/1975/5059/files/moon-earth-rise-2_2500x2500.png?v=1611272940);
-    background-size: cover;
-    background-position: right top;
-    color: #ffffff;
-}
-.center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-body {
-    color: #1a1a1a;
-    background-color: #00000;
-    font: normal 16px/21px "Work Sans",sans-serif;
-}
-body {
-    height: 100%;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-}
-*, *:after, *:before {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-*, *:after, *:before {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.video {
-    font-family:'Times New Roman', Times, serif;
-    color:cyan;
-}
-iframe {
-    border: darkorchid;
-    border-width: 10px;
-    border-bottom: darkorchid;
-}
-
-.cut {
-    color:indigo;
-    text-shadow: lime;
-}
-	.button {
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-	}
-	
-</style>
-<center> <div id="headerCountdown">
-<center>      <div class="unit">
-        <span class="days">33</span>
-        <small>Days</small>
-      </div> </center>
-     <center> <div class="unit">
-        <span class="hours">04</span>
-        <small>Hours</small>
-      </div> </center>
-      <center><div class="unit">
-        <span class="minutes">20</span>
-        <small>Minutes</small>
-      </div> </center>
-	  <center><div class="unit">
-        <span class="seconds">58</span>
-        <small>Seconds</small>
-      </div></center>
-    </div> </center>
-<script type="text/javascript">
-      function newCountdown(element, deadline) {
-        // Container element
-        var clock = document.getElementById(element);
-
-        // Set the date we're counting down to
-        var countDownDate = new Date(deadline).getTime();
-
-        // Update every interval
-        var continueCount = function() {
-          setInterval(updateCounter, 1000);
-        };
-
-        // Update the count down every 1 second
-        var updateCounter = function() {
-          // Get todays date and time
-          var nowDate = new Date().getTime();
-
-          // Find the distance between nowDate and the count down date
-          var distance = countDownDate - nowDate;
-
-          // Repeat if we haven't reached 0 or below, otherwise set everything to 0
-          if (distance > 0) {
-            continueCount();
-            updateClock(distance);
-          } else {
-            displayTimeoutMessage(clock);
-            clearInterval(updateCounter);
-          }
-        }
-
-        function updateClock(distance) {
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-          // HTML elements
-          var daysSpan = clock.querySelector('.days'),
-              hoursSpan = clock.querySelector('.hours'),
-              minutesSpan = clock.querySelector('.minutes'),
-              secondsSpan = clock.querySelector('.seconds');
-
-          // Fill our HTML elements
-          daysSpan.innerHTML = days;
-          hoursSpan.innerHTML = ('0' + hours).slice(-2);
-          minutesSpan.innerHTML = ('0' + minutes).slice(-2);
-          secondsSpan.innerHTML = ('0' + seconds).slice(-2);
-        }
-
-        function displayTimeoutMessage(clock) {
-          clock.innerHTML = 'Lunar capsule closed';
-        }
-
-        updateCounter();
-      }
- 
-      newCountdown('headerCountdown', 'March 1, 2021, 03:00:00 PST');
-      // newCountdown('headerCountdown', 'January 1, 1970, 00:00:00 GMT');
-    </script>
-<center> <p>Something big is going to happen when the countdown ends.  </p> <center> <br>
-<center> <p> Hello! Welcome to my website. CHillFN the channel on youtube was created to post awesome fortnite montages take a look at them down below</p> </center>
- <div id="video">
-   <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/4z1BxgfGWI4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center>
-  <div id="cut"> </div><p> Fortnite Montage Teaser
-    <br> By ChillFN </p> </div> 
+<header id="iser" class="header-banner">
+  <div title="Aarush Diwakar" id="aa" class="container-width">
+    <div id="i22h" title="Aarush Diwakar" class="logo">ChillFn
+    </div>
+    <div class="logo-container">
+    </div>
+    <div class="clearfix">
+    </div>
+    <div id="iie1r" class="lead-title">CHiLLFN
+    </div>
+    <div id="ixc1s" class="sub-lead-title">I am a youtuber who plays Fortnite, Minecraft &amp; More
+    </div>
+    <div id="ip4oh" class="lead-btn">Coming soon
+    </div>
   </div>
-	
-	<a href="https://www.youtube.com/channel/UCGYaUbPNmJBCVE5S7Foz3LA/featured">Youtube!</a>
-
-	
+</header>
+<section class="flex-sect">
+  <div id="if9xl" class="container-width">
+    <div id="i7vkk" class="flex-title">Skills
+    </div>
+    <div id="ivly8" class="flex-desc">Everybody has some skills, Here are mine
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-body">
+          <div id="ixp01" class="card-title">Web Design
+          </div>
+          <div id="irq5f" class="card-sub-title">CSS3
+          </div>
+          <div id="i92ml" class="card-desc">I am a good webdesigner who knows how to use CSS3. I have made beautiful webpages like this. 
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div id="ivxlb" class="card-title">HTML Coding
+          </div>
+          <div id="ibfmn" class="card-sub-title">HTML5
+          </div>
+          <div id="i4nin" class="card-desc">I also do HTML5 Coding. Like this webpage.
+            <div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div id="ib6fu" class="card-title">Video Editing
+          </div>
+          <div id="imv63" class="card-sub-title">WonderShare FIlmora X 
+          </div>
+          <div id="i61b1" class="card-desc">I can also do video editing with wondershare filmora x &amp; Adobe premiere pro. 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="i2f2iy" class="bdg-sect">
+  <div class="container-width">
+    <h1 id="ib7yqb" class="bdg-title">A little about me
+    </h1>
+    <div id="i5n4xi" class="badges">
+      <div class="badge">
+        <div class="badge-header">
+        </div>
+        <div class="badge-body">
+          <div id="i4wdy4" class="badge-name">Aarush Diwakar
+          </div>
+          <div id="ihj5nz" class="badge-role">Youtuber &amp; Web Devloper
+          </div>
+          <div id="iol1pe" class="badge-desc">I am a 11 year old who has interest in coding
+            <div>I first started coding because I wanted to create application but then I found web development easy. 
+            </div>
+          </div>
+        </div>
+        <div class="badge-foot">
+        </div>
+        <div id="iyo1s">Contact us through this form
+        </div>
+        <div id="i7to5">
+          <form action="https://formsubmit.co/aarushdiwakar8@gmail.com" method="POST">
+            <input type="text" name="name" required placeholder="Name" id="ihsxe"/>
+            <input type="email" name="email" required placeholder="Email" id="iyekt"/>
+            <input type="subject" name="subject" required placeholder="Subject" id="i7s6g"/>
+            <input type="message" name="message" required placeholder="Message" id="i4hou"/>
+            <br/>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</html>
